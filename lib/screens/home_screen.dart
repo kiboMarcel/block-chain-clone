@@ -5,7 +5,7 @@ import '../constants/colors.dart';
 import '../widgets/crypto_tile.dart';
 import '../widgets/currency_status.dart';
 import '../widgets/custom_appbar.dart';
-import '../widgets/custom_appbar_test.dart';
+import '../widgets/custom_border.dart';
 import '../widgets/icon_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,17 +22,16 @@ class _HomeScreenState extends State<HomeScreen> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 120,
-            flexibleSpace: Column(
-              children: [
-                CustomPaint(
-                  painter: CAppBar(
-                    mycolors: const [Color(0xFF862FB6), Color(0xFFF60598)],
-                    radius: 50.0,
-                  ),
-                  child: const SizedBox(width: double.infinity, height: 120),
-                ),
-              ],
+            toolbarHeight: 50,
+            expandedHeight: 150,
+            pinned: true,
+            shape: const CustomShapeBorder(radius: 20),
+            flexibleSpace: CustomPaint(
+              painter: CAppBar(
+                mycolors: const [Color(0xFF862FB6), Color(0xFFF60598)],
+                radius: 50.0,
+              ),
+              child: const SizedBox(width: double.infinity, height: 30),
             ),
           ),
           SliverToBoxAdapter(
