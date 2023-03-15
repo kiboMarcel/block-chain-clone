@@ -16,11 +16,11 @@ class _PaintScreenState extends State<PaintScreen> {
       body: SafeArea(
         child: Center(
           child: CustomPaint(
-            child: SizedBox(
+            painter: MyPainter(mycolor: Colors.purple, radius: 30),
+            child: const SizedBox(
               width: 200,
               height: 150,
             ),
-            painter: MyPainter(mycolor: Colors.purple, radius: 30),
           ),
         ),
       ),

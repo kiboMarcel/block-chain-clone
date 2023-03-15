@@ -14,7 +14,7 @@ class CAppBar extends CustomPainter {
 
     paint.shader = ui.Gradient.linear(
       Offset(size.width, 0),
-      const Offset(0, 0),
+      Offset(size.width / 3, 0),
       [mycolors[0], mycolors[1]],
     );
 

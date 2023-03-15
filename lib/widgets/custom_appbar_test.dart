@@ -55,7 +55,7 @@ class InvertedRoundedRectanglePainter extends CustomPainter {
       path.lineTo(0, 0);*/
     path.lineTo(0, 98);
     path.addArc(
-      Offset(0, 80) & cornerSize,
+      const Offset(0, 80) & cornerSize,
       math.pi,
       math.pi / 2,
     );
